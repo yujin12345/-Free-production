@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>(PageTitle | )SiteTitle</title>
+    <meta name="keywords" content="キーワード,半角のカンマ区切りで6〜7語(SEOの効果なし)">
+    <meta name="description" content="検索結果に表示する200語程度のページ説明文(SEOの効果なし)">
+    <!-- スマホの表示倍率を100%にリセット -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iPhoneXでのボックス表示対応 -->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!-- OGP (Facebookでのフィード表示) -->
+    <meta property="fb:app_id" content="App-ID(15文字の半角数字)" />
+    <meta property="og:title" content="(PageTitle | )SiteTitle" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sample.com/aboutus" />
+    <meta property="og:image" content="http://test.com/img/ogp.jpg" />
+    <meta property="og:site_name" content="SiteTitle" />
+    <meta property="og:description" content="ページ説明文" />
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <!-- ResetCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
+    <!-- GoogleFont日本語NotSans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <!-- OriginCSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <!-- jQuery2 -->
+    <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+    <style>
+    html * {
+        /* padding/border差し引きなし */
+        box-sizing: border-box;
+    }
+
+    body {
+        /* スマホ横位置の文字サイズ変更なし */
+        -webkit-text-size-adjust: 100%;
+        /* remのフォント単位指定 */
+        font-size: 10px;
+        /* 基本フォント */
+        font-family: "Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+        color: #333;
+        line-height: 2;
+    }
+    /* 画像の表示崩れを調整 */
+
+    img {
+        /* 画像の下の隙間を取り除く */
+        display: block;
+        height: auto;
+        /* 親要素のはみ出しを防ぐ */
+        max-width: 100%;
+    }
+    /* DP比が2倍以上のとき高解像度の画像に置き換え */
+
+    @media screen and (min-device-pixel-ratio: 2) {
+        .hero {
+            background: url("images/herox2.png") 0 0 no-repeat;
+            background-size: 960px 300px;
+        }
+    }
+    </style>
+    <!-- HTML上で使用するJSのブラウザ互換を補完 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- IE9以下にHTML5の新要素を認識 -->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- <script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5645877619388092",
+    enable_page_level_ads: true
+  });
+</script> -->
+</head>
+
+<body>
+    <h1>SFTP TEST !!!</h1>
+    <p>
+        <a href="" id="ga01">ga01</a>
+        <br>
+        <a href="" id="ga02">ga02</a>
+        <br>
+        <a href="" id="ga03">ga03</a>
+        <br>
+        <a href="" id="ga04">ga04</a>
+        <br>
+    </p>
+    <!-- Google Analytics Tracking Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111094655-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('require', 'linkid');
+    gtag('config', 'UA-111094655-1');
+    </script>
+</body>
+</html
