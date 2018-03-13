@@ -1,0 +1,91 @@
+
+html * {
+    /* padding/border差し引きなし */
+    box-sizing: border-box;
+}
+
+body {
+    /* スマホ横位置の文字サイズ変更なし */
+    -webkit-text-size-adjust: 100%;
+    /* remのフォント単位指定 */
+    font-size: 10px;
+    /* 基本フォント */
+    font-family: "Sawarabi Gothic","Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    color: #333;
+    line-height: 2;
+}
+
+
+/* 画像の表示崩れを調整 */
+
+img {
+    /* 画像の下の隙間を取り除く */
+    display: block;
+    height: auto;
+    /* 親要素のはみ出しを防ぐ */
+    max-width: 20%;
+}
+
+h1 {
+    // font-size: 10px ;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+
+/* DP比が2倍以上のとき高解像度の画像に置き換え */
+
+@media screen and (min-device-pixel-ratio: 2) {
+    .hero {
+        background: url("images/herox2.png") 0 0 no-repeat;
+        background-size: 960px 300px;
+    }
+}
+
+// index.html
+
+// main
+.jumbotron {
+    background-image: url(/images/background.jpg);
+    h1 {
+        font-size: 30px;
+    }
+}
+
+.navbar {
+    background-color: #fff;
+
+    .form-control {
+        float: right;
+    }
+}
+main {
+    nav {
+            h3 {
+                font-size: 0.5em;
+            }
+    }
+    .more {
+        float: right;
+    }
+}
+// footer
+.footer {
+    background-color: #333;
+        color: #fff;
+        padding-bottom: 10px;
+    .footer-btn {
+        background-color: #ddd;
+        text-align: center;
+        height: 50px;
+
+        .btn-primary {
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+    }
+}

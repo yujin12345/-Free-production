@@ -24,8 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
     <!-- GoogleFont日本語NotSans -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <!-- GoogleFont日本語sawarabigothic -->
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
     <!-- OriginCSS -->
-    <link rel="stylesheet" href="css/style.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- jQuery2 -->
@@ -37,45 +38,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <style>
-    html * {
-        /* padding/border差し引きなし */
-        box-sizing: border-box;
-    }
-
-    body {
-        /* スマホ横位置の文字サイズ変更なし */
-        -webkit-text-size-adjust: 100%;
-        /* remのフォント単位指定 */
-        font-size: 10px;
-        /* 基本フォント */
-        font-family: "Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-        color: #333;
-        line-height: 2;
-    }
-    /* 画像の表示崩れを調整 */
-
-    img {
-        /* 画像の下の隙間を取り除く */
-        display: block;
-        height: auto;
-        /* 親要素のはみ出しを防ぐ */
-        max-width: 20%;
-    }
-    /* DP比が2倍以上のとき高解像度の画像に置き換え */
-
-    @media screen and (min-device-pixel-ratio: 2) {
-        .hero {
-            background: url("images/herox2.png") 0 0 no-repeat;
-            background-size: 960px 300px;
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <!-- HTML上で使用するJSのブラウザ互換を補完 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <!-- IE9以下にHTML5の新要素を認識 -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    [if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- <script>
@@ -88,31 +56,35 @@
 
 <body>
     <header>
-
-
-
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar  navbar-fixed-top">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                     <p>冠婚葬祭特化型クラウドファンディングサービス</p>
-                    <h1><a class="navbar-brand" href="#">タイトル</a></h1>
+                <div class="container text-center">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <!-- <p>冠婚葬祭特化型クラウドファンディングサービス</p> -->
+                        <a class="navbar-brand" href="#">タイトル</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="">プロジェクトを始める</a></li>
+                            <li><a href="">プロジェクトを支援する</a></li>
+                            <li><a href="">ログイン</a></li>
+                            <li><a href="">会員登録</a></li>
+                            <form class="navbar-form navbar-left visible-lg-block" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="">プロジェクトを始める</a></li>
-                <li><a href="">プロジェクトを支援する</a></li>
-                <li><a href="">ログイン</a></li>
-                <li><a href="">会員登録</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+                <!-- /.container-fluid -->
             </div>
-            <!-- /.container-fluid -->
         </nav>
-
         <img src="" alt="">
     </header>
     <div class="input-group">
@@ -123,161 +95,276 @@
     </button>
   </span>
     </div>
-    <nav>
-        <h3>プロジェクトのカテゴリ</h3>
-        <ul>
-            <li><a href="">冠</a></li>
-            <li><a href="">婚</a></li>
-            <li><a href="">葬</a></li>
-            <li><a href="">際</a></li>
-        </ul>
-    </nav>
     <main>
-        <h2>新たなチャレンジを応援しよう</h2>
-        <p>世の中を良くするチャレンジが毎日続々と登場</p>
-        <div class="container  project">
-            <h3>注目のプロジェクト</h3>
+        <div class="jumbotron">
+
+            <div class="container text-center">
+                <h1>寄付が変える、新たな形</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <br> Necessitatibus temporibus ab sit perferendis,
+                    <br> harum iusto doloribus, quisquam eius aspernatur cupiditate.</p>
+                <p><a class="btn btn-success btn-lg" href="#" role="button">プロジェクトを始める</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h2>新たなチャレンジを応援しよう</h2>
+            <p>世の中を良くするチャレンジが毎日続々と登場</p>
+        </div>
+        <div class="container project">
             <div class="row">
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/age01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">成人式</div>
-                        <div class=""><i class="far fa-clock"></i>残り10日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
+                <div class="col-md-9">
+                    <h3>注目のプロジェクト</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/age01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">成人式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り10日</div>
+                                        <div class="">支援総額0000円</div>
+                                        <div class=""></div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/wedding01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">結婚式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り1日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">法事</div>
+                                        <div class="glyphicon glyphicon-tag">法事</div>
+                                        <div class=""><i class="far fa-clock"></i>残り0日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="more">もっと見る</a>
+                    </div>
+                    <h3>新着のプロジェクト</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/age01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">成人式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り10日</div>
+                                        <div class="">支援総額0000円</div>
+                                        <div class=""></div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/wedding01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">結婚式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り1日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">法事</div>
+                                        <div class="glyphicon glyphicon-tag">法事</div>
+                                        <div class=""><i class="far fa-clock"></i>残り0日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="more">もっと見る</a>
+                    </div>
+                    <h3>終了間際のプロジェクト</h3>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/age01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">成人式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り10日</div>
+                                        <div class="">支援総額0000円</div>
+                                        <div class=""></div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/wedding01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">結婚式</div>
+                                        <div class=""><i class="far fa-clock"></i>残り1日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        <div class="glyphicon glyphicon-tag">法事</div>
+
+                                        <div class=""><i class="far fa-clock"></i>残り0日</div>
+                                        <div class="">支援総額0000円</div>
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                <a href="" class="">もっと見る</a>
+                    </div>
                 </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/wedding01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">結婚式</div>
-                        <div class=""><i class="far fa-clock"></i>残り1日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/celemony01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">法事</div>
-                        <div class=""><i class="far fa-clock"></i>残り0日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
+                <div class="col-md-3 hidden-sm">
+
+                    <nav>
+                        <h3>プロジェクトのカテゴリ</h3>
+                        <ul>
+                            <li><a href=" ">冠</a></li>
+                            <li><a href=" ">婚</a></li>
+                            <li><a href=" ">葬</a></li>
+                            <li><a href=" ">際</a></li>
+                        </ul>
+                        <h3>プロジェクトのタイミング</h3>
+                        <ul>
+                            <li><a href=" ">すべて</a></li>
+                            <li><a href=" ">新着</a></li>
+                            <li><a href=" ">まもなく終了</a></li>
+
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <h3>新着のプロジェクト</h3>
-            <div class="row">
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/age01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">成人式</div>
-                        <div class=""><i class="far fa-clock"></i>残り10日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/wedding01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">結婚式</div>
-                        <div class=""><i class="far fa-clock"></i>残り1日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/celemony01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">法事</div>
-                        <div class=""><i class="far fa-clock"></i>残り0日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-            </div>
-            <h3>終了間際のプロジェクト</h3>
-            <div class="row">
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/age01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">成人式</div>
-                        <div class=""><i class="far fa-clock"></i>残り10日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/wedding01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">結婚式</div>
-                        <div class=""><i class="far fa-clock"></i>残り1日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-                <div class="col-sm12 col-md-4">
-                    <a href="">
-                        <img src="../images/celemony01.png" alt="" >
-                        <div>title</div>
-                        <div class="glyphicon glyphicon-tag">法事</div>
-                        <div class=""><i class="far fa-clock"></i>残り0日</div>
-                        <div class="">支援総額0000円</div>
-                        <div class=""></div>
-                    </a>
-                </div>
-            </div>
+        </div>
+
+        <div class="container">
             <h3>活動報告</h3>
             <div class="row">
                 <div class="col-sm12 col-md-3">
-                    <a href=""><img src="../images/age01.png" alt="" ></a>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolores aut quibusdam asperiores in nesciunt quos veritatis dignissimos voluptates animi inventore similique commodi, aliquam, labore alias ab ipsam aperiam magnam.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm12 col-md-3">
-                    <a href=""><img src="../images/wedding01.png" alt="" ></a>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolores aut quibusdam asperiores in nesciunt quos veritatis dignissimos voluptates animi inventore similique commodi, aliquam, labore alias ab ipsam aperiam magnam.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm12 col-md-3">
-                    <a href=""><img src="../images/celemony01.png" alt="" ></a>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolores aut quibusdam asperiores in nesciunt quos veritatis dignissimos voluptates animi inventore similique commodi, aliquam, labore alias ab ipsam aperiam magnam.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm12 col-md-3">
-                    <a href=""><img src="../images/funeral01.png" alt="" ></a>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/celemony01.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolores aut quibusdam asperiores in nesciunt quos veritatis dignissimos voluptates animi inventore similique commodi, aliquam, labore alias ab ipsam aperiam magnam.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row footer-btn">
+                <a href="" class=" btn btn-primary text-center">プロジェクトを始める</a>
+            </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h3>はじめる</h3>
                     <ul>
-                        <li>クラウドファンディングとは</li>
-                        <li>プロジェクトを始める</li>
-                        <li>プロジェクトを応援する</li>
-                        <li>ヘルプ</li>
+                        <a href=""><li>クラウドファンディングとは</li></a>
+                        <a href=""><li>プロジェクトを始める</li></a>
+                        <a href=""><li>プロジェクトを応援する</li></a>
+                        <a href=""><li>ヘルプ</li></a>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <h3>about</h3>
                     <ul>
-                        <li>よくある質問</li>
-                        <li>利用規約</li>
-                        <li>会社情報</li>
-                        <li>お問い合わせ</li>
+                        <a href=""><li>よくある質問</li></a>
+                        <a href=""><li>利用規約</li></a>
+                        <a href=""><li>会社情報</li></a>
+                        <a href=""><li>お問い合わせ</li></a>
                     </ul>
                 </div>
             </div>
+        </div>
     </footer>
     <!-- Google Analytics Tracking Code -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111094655-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111094655-1 "></script>
     <script>
     window.dataLayer = window.dataLayer || [];
 
