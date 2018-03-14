@@ -19,6 +19,7 @@ body {
     font-family: "Sawarabi Gothic","Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     color: #333;
     line-height: 2;
+    background-color: #fdfdfd;
 }
 
 
@@ -36,6 +37,9 @@ li {
     list-style-type: none;
 }
 
+a {
+    color: #333;
+}
 /* DP比が2倍以上のとき高解像度の画像に置き換え */
 
 @media screen and (min-device-pixel-ratio: 2) {
@@ -72,16 +76,34 @@ main {
 }
     .box-shadow{
 
-        padding: 10px 10px;
+
         margin-bottom: 30px;
-        box-shadow: 3px 3px 6px -2px #555,
-  3px 3px 8px rgba(255,255,255,0.8) inset;
+  //       box-shadow: 3px 3px 6px -2px #555,
+  // 3px 3px 8px rgba(255,255,255,0.8) inset;
+  border: 0.5px solid #aaa;
   img {
     margin: 0 auto;
+    width: 100%;
+    padding: 0
   }
     }
+    .card-title {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        display: inline-block;
 
-    .box-shadow {
+    }
+    .money,.days,.tag{
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    .btn{
+        margin: 10px 0 20px 0;
+    }
+    .days {
 
     }
     .more {
@@ -90,21 +112,46 @@ main {
 }
 .nav-side {
     text-align: justify;
-
+    // background-color: #fff;
     padding-left: 100px;
+    width:350px;
 
     h3 {
         font-size: 2em;
-        padding-top: 50px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #333;
+
+        // background-color: #555;
+        // color: #fff;
     }
     ul {
         padding-left: 0;
+        // background-color: #eee;
     li {
-        font-size: 1.7em;
+        font-size: 1.5em;
         padding-top: 10px;
-        font-family:  "Sawarabi Mincho";
+        padding-left: 10px;
+        // font-family:  "Sawarabi Mincho";
+        margin-bottom: 3px;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #f7f7f7;
+        border-left: solid 6px #5cb85c;/*左線*/
+        color: #ff7c5c;/*文字色*/
         font-weight: bold;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+
+}
+li:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+}
     }
+    .category li{
+
+
+
     }
 }
 .active {
@@ -116,15 +163,32 @@ main {
 .footer {
     background-color: #333;
         color: #fff;
-        padding-bottom: 10px;
+
+        padding-bottom: 100px;
         font-size: 1.2em;
+
+        a {
+            color: #fff;
+        }
+        h3 {
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 10px;
+        }
+        ul{
+            padding: 0;
+            font-size: 1.2em;
+        }
+        .footer-text {
+
+        }
     .footer-btn {
         background-color: #ddd;
         text-align: center;
-        height: 50px;
+        height: 100px;
 
         .btn-success {
-            margin-top: 10px;
+            margin-top: 30px;
             border-radius: 20px;
         }
     }
